@@ -9,21 +9,203 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
-	<header class="bg-dark text-white p-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="/src/main/resources/static/img/logo1.png" alt="Logotipo" class="img-fluid">
-                </div>
-                <div class="col-md-6 text-center">
-                    <h1 class="fw-bold">Facultad de Ingeniería</h1>
-                    <p> holaaa</p>
-                </div>
-                <div class="col-md-3"></div>
+<body class="bg-secondary">
+	
+	<!-- Barra de Navegación nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+				<i class="bi bi-calculator-fill"></i>
+                
+                 Bienvenido
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Carreras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+                <a class="navbar-brand"></a>
+    			<form class="d-flex" role="search">
+      				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      				<button class="btn btn-outline-success" type="submit">Search</button>
+    			</form>
             </div>
         </div>
-    </header>
+    </nav>
+    
+    <!-- Sección Contenido Principal -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- ASIDE: Barra Lateral -->
+            <aside class="col-md-3 bg-light p-4">
+                <h4>Enláces</h4>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+					<div class="accordion-item">
+						<h3 class="accordion-header">
+      					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+       					 Biblioteca
+     					</button>
+    					</h3>
+    					<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body text-primary">Nuestros Servicios</div>
+							<div class="accordion-body"> - Préstamos de Documentos Bibliográficos (Consulte para más detalles)</div>
+							<div class="accordion-body"> - Renovación y Devolución de los documentos bibliográficos.</div>
+							<div class="accordion-body"> - Catálogo automatizado (OPAC).</div>
+							<div class="accordion-body"> - Trámite de Asociación.</div>
+							<div class="accordion-body"> - Centro de consultas de Normas IRAM - Biblioteca Virtual U-Sing.</div>
+							<div class="accordion-body"> - Bibliobuzón, buzón para depositar solo "libros" que necesite devolver , cuando la biblioteca este cerrada por distintos motivos (limpieza, reuniones, etc.).</div>
+							<div class="accordion-body"> - Cyber Académico.</div>
+							<div class="accordion-body"> - Wi-Fi</div>
+							<div class="accordion-body"> - Búsquedas Bibliográficas en la Biblioteca Electrónica MINCYT: <code>www.biblioteca.mincyt.gov.ar</code></div>
+							<div class="accordion-body"> - Dispenser de agua fria-caliente con filtro purificador.</div>
+							<div class="accordion-body"> - Formación de Usuarios.</div>
+							<div class="accordion-body"> - Visitas Guiadas.</div>
+							<div class="accordion-body"> Los préstamos de los documentos bibliográficos, se realizan teniendo como base el Reglamento de Préstamo de Documentos del Sistema de Información de Bibliotecas de la UNJu, aprobado por el Consejo Superior según Res.CS.0301-16.</div>
+						</div>
+					</div>
+                    <div class="accordion-item">
+  					  <h3 class="accordion-header">
+				      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+				       Calendario Académico
+				      </button>
+ 					  </h3>
+				   	<div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+				      <div class="accordion-body text-primary">Mes de Julio</div>
+				      <div class="accordion-body">- De 15 a 26 de Junio | Receso Invernal </div>
+				      <div class="accordion-body">- 29 de Julio/24 al 09 de Agosto/24 | 3er Turno Ordinario de Exámenes 2024</div>
+				  	 </div>
+				  	</div>
+                    <div class="accordion-item">
+					    <h3 class="accordion-header">
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+					        Oferta Académica
+					      </button>
+					    </h3>
+					    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+					      <div class="accordion-body text-primary">Carreras de Grado:</div>
+					      <div class="accordion-body"> * Ingeniería Informática </div>
+					      <div class="accordion-body"> * Ingeniería Industrial</div>
+					      <div class="accordion-body"> * Ingeniería Química</div>
+					      <div class="accordion-body"> * Ingeniería de Minas</div>
+					      <div class="accordion-body"> * Licenciatura en Sistemas</div>
+					      <div class="accordion-body"> * Licenciatura en Tecnología de los Alimentos</div>
+					      <div class="accordion-body"> * Licenciatura en Ciencias Geológicas</div>
+					      <div class="accordion-body text-primary">Carreras de Pregrado:</div>
+					      <div class="accordion-body"> * Analista Programador Universitario</div>
+					      <div class="accordion-body"> * Tecnicatura Universitaria en Perforaciones</div>
+					      <div class="accordion-body"> * Tecnicatura Universitaria en Diseñp Integral de Videojuegos</div>
+					      <div class="accordion-body text-primary">Carreras de Posgrado</div>
+					      <div class="accordion-body"> * Especialización en Enzeñanza de las Ciencias Exactas y Naturales</div>
+					      <div class="accordion-body"> * Maestría en Gestión de la Tecnología y la Innovación</div>
+					      <div class="accordion-body"> * Doctorado en Ingeniería Industrial</div>
+					      <div class="accordion-body"> * Doctorado Regional en Ciencia y Tecnología de los Alimentos</div>
+					    </div>
+					  </div>
+					</div>
+            </aside>
+
+            <!-- Contenido Principal -->
+            <main class="col-md-9 p-4">
+                <!-- HEADER: encabezado -->
+				<header class="bg-dark text-white p-4">
+        			<div class="container">
+           				<div class="row">
+                			<div class="col-md-3">
+                    		<img src="../static/img/logo1.png" alt="Logotipo" class="img-fluid">
+                			</div>
+                			<div class="col-md-6 text-center">
+                   			 <h1 class="fw-bold p-5">Facultad de Ingeniería</h1>
+                   			 <p class=".text-light-emphasis"><em>— En cada presente, una oportunidad.</em></p>
+               				</div>
+                		<div class="col-md-3"></div>
+           			 </div>
+       			 </div>
+    			</header>
+                <!-- Sección de Descripción -->
+                <section class="text-center">
+					<br>
+					<span class="placeholder col-12 bg-light placeholder-xs"></span>
+                    <h2 class="text-primary-emphasis shadow-sm p-3 mb-5 bg-body-tertiary rounded">Sobre la Facultad</h2>
+                    <p class="text-white">Situada en el corazón de Jujuy, nuestra Facultad de Ingeniería representa un faro de excelencia académica, donde la innovación y el compromiso se fusionan para forjar el futuro. Descubre cómo nuestra comunidad de aprendizaje trabaja en armonía con el entorno, desafiando los límites y abrazando el cambio con pasión y determinación.</p>
+                </section>
+
+                <!-- Sección de Noticias Recientes -->
+                <section class="mt-4">
+					<span class="placeholder col-12 bg-light placeholder-xs"></span>
+                    <h2 class="text-center text-primary-emphasis shadow-sm p-3 mb-5 bg-body-tertiary rounded">Noticias Recientes</h2>
+                    <div class="row">
+					  <div class="col-sm-6 mb-3 mb-sm-0">
+					    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+							<img src="../static/img/52-aniversario-fiunju.jpeg" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <h5 class="card-title">La Facultad de Ingeniería cumple 52 años</h5>
+					        <p class="card-text">📣 ¡52° Aniversario de nuestra querida Facultad de Ingeniería! Y lo festeja con una riquísima....</p>
+					        <a href="#" class="btn btn-primary">Enlace</a>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="col-sm-6">
+					    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+							<img src="../static/img/taller-autocuidado.jpg" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <h5 class="card-title">Segundo y Tercer Encuentro de los Talleres de Capacitación de "AUTOCUIDADO Y EMOCIONES" para No Docentes de la FI UNJu</h5>
+					        <p class="card-text">El segundo encuentro, que tuvo lugar el 15 de mayo, se centró en la exploración del tema "Qué son las emociones", mientras que el tercer encuentro, realizado el 22 de mayo, se enfocó en "Habilidades para la vida: Autoconocimiento"...</p>
+					        <a href="#" class="btn btn-primary">Enlace</a>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">Convocatoria “Beca UNISA” AA 2024/2025 | Università degli Studi di Salerno</a>
+                        <a href="#" class="list-group-item list-group-item-action">Renovación de convenio académico entre la Facultad de Ingeniería y el Municipio de la Ciudad Perico</a>
+                        <a href="#" class="list-group-item list-group-item-action">Campaña de vacunación UNJu 2024</a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="bg-dark text-white mt-4 p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contacto</h5><br>
+                    <i class="bi bi-map-fill">  Ítalo Palanca N° 10</i><br><br>
+					<i class="bi bi-globe-americas">  San Salvador de Jujuy, Jujuy, Argentina</i><br><br>
+                    <i class="bi bi-telephone"> (388) 123-4567</i><br><br>
+                    <i class="bi bi-envelope text-primary">  info@fi.unju.edu.ar</i>
+                </div>
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                </div>
+                <div class="col-md-4 text-end">
+                    <p>&copy; 2024 Facultad de Ingeniería - UNJu. Todos los derechos reservados.</p>
+                    <p>&copy; Guanca Venicio Siomara Jael's page.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
