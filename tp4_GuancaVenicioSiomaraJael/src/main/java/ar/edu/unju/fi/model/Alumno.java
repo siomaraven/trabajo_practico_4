@@ -12,19 +12,7 @@ public class Alumno {
 	private String domicilio;
 	private String lu;
 	
-	public Alumno(String dni, String nombre, String apellido, String email, String telefono, Date fechaNacimiento,
-			String domicilio, String lu) {
-		super();
-		this.dni = dni;
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.email = email;
-		this.telefono = telefono;
-		this.fechaNacimiento = fechaNacimiento;
-		this.domicilio = domicilio;
-		this.lu = lu;
-	}
-
+	
 	public String getDni() {
 		return dni;
 	}

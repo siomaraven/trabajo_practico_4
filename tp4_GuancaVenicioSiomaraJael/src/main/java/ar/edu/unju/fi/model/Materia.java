@@ -7,24 +7,14 @@ import org.springframework.stereotype.Component;
 public class Materia{
 	private String codigo;
 	private String nombre;
-	private String curso;
+	private int curso;
 	private int cantidadHoras;
 	private String modalidad;
-	@Autowired
+	@Autowired(required=true)
 	private Docente docente;
+	@Autowired(required=true)
 	private Carrera carrera;
 	
-	public Materia(String codigo, String nombre, String curso, int cantidadHoras, String modalidad, Docente docente,
-			Carrera carrera) {
-		super();
-		this.codigo = codigo;
-		this.nombre = nombre;
-		this.curso = curso;
-		this.cantidadHoras = cantidadHoras;
-		this.modalidad = modalidad;
-		this.docente = docente;
-		this.carrera = carrera;
-	}
 
 	public String getCodigo() {
 		return codigo;
@@ -42,11 +32,11 @@ public class Materia{
 		this.nombre = nombre;
 	}
 
-	public String getCurso() {
+	public int getCurso() {
 		return curso;
 	}
 
-	public void setCurso(String curso) {
+	public void setCurso(int curso) {
 		this.curso = curso;
 	}
 
