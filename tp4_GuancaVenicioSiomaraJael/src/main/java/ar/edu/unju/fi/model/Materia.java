@@ -1,6 +1,5 @@
 package ar.edu.unju.fi.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,11 +9,13 @@ public class Materia{
 	private int curso;
 	private int cantidadHoras;
 	private String modalidad;
-	@Autowired(required=true)
 	private Docente docente;
-	@Autowired(required=true)
 	private Carrera carrera;
 	
+	
+	public Materia() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getCodigo() {
 		return codigo;

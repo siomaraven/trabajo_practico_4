@@ -10,6 +10,10 @@ public class Carrera {
 	private String estado;
 	
 
+	public Carrera() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getCodigo() {
 		return codigo;
 	}
