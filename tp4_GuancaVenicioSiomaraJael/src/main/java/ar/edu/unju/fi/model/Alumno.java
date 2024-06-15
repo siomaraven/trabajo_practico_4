@@ -1,6 +1,6 @@
 package ar.edu.unju.fi.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Alumno {
 	private String dni;
@@ -8,11 +8,23 @@ public class Alumno {
 	private String apellido;
 	private String email;
 	private String telefono;
-	private Date fechaNacimiento;
+	private LocalDate fechaNacimiento;
 	private String domicilio;
-	private String lu;
-	
-	
+	private String LU;
+
+	public Alumno(String dni, String nombre, String apellido, String email, String telefono, LocalDate localDate,
+			String domicilio, String lu) {
+		super();
+		this.dni = dni;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.email = email;
+		this.telefono = telefono;
+		this.fechaNacimiento = localDate;
+		this.domicilio = domicilio;
+		this.LU = lu;
+	}
+
 	public String getDni() {
 		return dni;
 	}
@@ -53,11 +65,11 @@ public class Alumno {
 		this.telefono = telefono;
 	}
 
-	public Date getFechaNacimiento() {
+	public LocalDate getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 
-	public void setFechaNacimiento(Date fechaNacimiento) {
+	public void setFechaNacimiento(LocalDate fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
@@ -70,10 +82,10 @@ public class Alumno {
 	}
 
 	public String getLu() {
-		return lu;
+		return LU;
 	}
 
 	public void setLu(String lu) {
-		this.lu = lu;
+		this.LU = lu;
 	}
 }

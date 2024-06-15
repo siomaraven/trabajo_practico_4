@@ -1,8 +1,5 @@
 package ar.edu.unju.fi.model;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Carrera {
 	private String codigo;
 	private String nombre;
@@ -10,8 +7,13 @@ public class Carrera {
 	private String estado;
 	
 
-	public Carrera() {
-		// TODO Auto-generated constructor stub
+
+	public Carrera(String codigo, String nombre, int cantidadAños, String estado) {
+		super();
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.cantidadAños = cantidadAños;
+		this.estado = estado;
 	}
 
 	public String getCodigo() {
@@ -34,7 +36,7 @@ public class Carrera {
 		return cantidadAños;
 	}
 
-	public void setCantidadAnios(int cantidadAños) {
+	public void setCantidadAños(int cantidadAños) {
 		this.cantidadAños = cantidadAños;
 	}
 

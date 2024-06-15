@@ -6,50 +6,31 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @Controller
-@RequestMapping("/carrera")
+@RequestMapping("/carreras")
 public class CarreraController {
 
-    @GetMapping("/listar")
+    @GetMapping
     public String listarCarreras(Model model) {
-        List<Carrera> carreras = CarreraCollection.listarCarreras();
-        model.addAttribute("carreras", carreras);
-        return "listarCarreras";
-    }
-
-    @GetMapping("/form")
-    public String mostrarFormularioCarrera(Model model) {
-        model.addAttribute("carrera", new Carrera());
-        return "formCarrera";
-    }
-
-    @GetMapping("/form/{codigo}")
-    public String mostrarFormularioEditarCarrera(@PathVariable String codigo, Model model) {
-        Carrera carrera = CarreraCollection.buscarCarrera(codigo);
-        if (carrera != null) {
-            model.addAttribute("carrera", carrera);
-            return "formCarrera";
-        }
-        return "redirect:/carrera/listar";
+        model.addAttribute("carreras", CarreraCollection.listar());
+        return "carrera";
     }
 
     @PostMapping("/agregar")
     public String agregarCarrera(@ModelAttribute Carrera carrera) {
-        CarreraCollection.agregarCarrera(carrera);
-        return "redirect:/carrera/listar";
+        CarreraCollection.agregar(carrera);
+        return "redirect:/carreras";
     }
 
     @PostMapping("/modificar")
     public String modificarCarrera(@ModelAttribute Carrera carrera) {
-        CarreraCollection.modificarCarrera(carrera);
-        return "redirect:/carrera/listar";
+        CarreraCollection.modificar(carrera);
+        return "redirect:/carreras";
     }
 
     @GetMapping("/eliminar/{codigo}")
     public String eliminarCarrera(@PathVariable String codigo) {
-        CarreraCollection.eliminarCarrera(codigo);
-        return "redirect:/carrera/listar";
+        CarreraCollection.eliminar(codigo);
+        return "redirect:/carreras";
     }
 }

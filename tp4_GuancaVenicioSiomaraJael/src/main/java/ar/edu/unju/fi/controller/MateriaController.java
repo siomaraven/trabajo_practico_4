@@ -10,41 +10,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import ar.edu.unju.fi.collections.*;
 import ar.edu.unju.fi.model.*;
 
-import java.util.List;
-
 @Controller
-@RequestMapping("/materia")
+@RequestMapping("/materias")
 public class MateriaController {
 	
-	@GetMapping("/listar")
+	@GetMapping
 	public String listarMaterias(Model model) {
-		List<Materia> materias = MateriaCollection.listarMaterias();
-		model.addAttribute("materias", materias);
-		return "listarMaterias";
-	}
-	
-	@GetMapping("/form")
-    public String mostrarFormularioMateria(Model model) {
-        model.addAttribute("materia", new Materia());
-        return "formMateria"; // nombre de la vista
+		model.addAttribute("materias", MateriaCollection.listar());
+		return "materia";
 	}
 	
 	@PostMapping("/agregar")
     public String agregarMateria(@ModelAttribute Materia materia) {
-        MateriaCollection.agregarMateria(materia);
-        return "redirect:/materia/listar";
+        MateriaCollection.agregar(materia);
+        return "redirect:/materias";
     }
 	
-	@GetMapping("/eliminar/{codigo}")
-    public String eliminarMateria(@PathVariable String codigo) {
-        MateriaCollection.eliminarMateria(codigo);
-        return "redirect:/materia/listar";
-    }
-
     @PostMapping("/modificar")
     public String modificarMateria(@ModelAttribute Materia materia) {
-        MateriaCollection.modificarMateria(materia);
-        return "redirect:/materia/listar";
+        MateriaCollection.modificar(materia);
+        return "redirect:/materias";
     }
-	
+    
+	@GetMapping("/eliminar/{codigo}")
+    public String eliminarMateria(@PathVariable String codigo) {
+		MateriaCollection.eliminar(codigo);
+		return "redirect:/materias";
+	}
 }

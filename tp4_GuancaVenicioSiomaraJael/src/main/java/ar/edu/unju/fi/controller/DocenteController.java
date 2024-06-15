@@ -7,40 +7,31 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @Controller
-@RequestMapping("/docente")
-
+@RequestMapping("/docentes")
 public class DocenteController {
-	@GetMapping("/listar")
+	
+	@GetMapping
     public String listarDocentes(Model model) {
-        List<Docente> docentes = DocenteCollection.listarDocentes();
-        model.addAttribute("docentes", docentes);
-        return "listarDocentes"; // nombre de la vista
+        model.addAttribute("docentes", DocenteCollection.listar());
+        return "docentes";
     }
-
-    @GetMapping("/form")
-    public String mostrarFormularioDocente(Model model) {
-        model.addAttribute("docente", new Docente());
-        return "formDocente"; // nombre de la vista
-    }
-
+	
     @PostMapping("/agregar")
     public String agregarDocente(@ModelAttribute Docente docente) {
-        DocenteCollection.agregarDocente(docente);
-        return "redirect:/docente/listar";
-    }
-
-    @GetMapping("/eliminar/{legajo}")
-    public String eliminarDocente(@PathVariable String legajo) {
-        DocenteCollection.eliminarDocente(legajo);
-        return "redirect:/docente/listar";
+        DocenteCollection.agregar(docente);
+        return "redirect:/docentes";
     }
 
     @PostMapping("/modificar")
     public String modificarDocente(@ModelAttribute Docente docente) {
-        DocenteCollection.modificarDocente(docente);
-        return "redirect:/docente/listar";
+        DocenteCollection.modificar(docente);
+        return "redirect:/docentes";
+    }
+    
+    @GetMapping("/eliminar/{legajo}")
+    public String eliminarDocente(@PathVariable int legajo) {
+        DocenteCollection.eliminar(legajo);
+        return "redirect:/docentes";
     }
 }
